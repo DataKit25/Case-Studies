@@ -12,6 +12,7 @@ SQL Queries:
 * <a href="https://github.com/DataKit25/Case-Studies/blob/main/Google_DA_Capstone_%20Cyclistic-Case-Study/Data%20Exploration.sql">Data Exploration
 * <a href="https://github.com/DataKit25/Case-Studies/blob/main/Google_DA_Capstone_%20Cyclistic-Case-Study/Data%20Cleaning.sql"> Data Cleaning
 * <a href="https://github.com/DataKit25/Case-Studies/blob/main/Google_DA_Capstone_%20Cyclistic-Case-Study/Data%20Analysis.sql">Data Analysis
+* Data Visualisation 
 
 ### Background 
 
@@ -78,5 +79,30 @@ Steps to understand the data I am working with:
 * Checking for how many rides lasted over a day and shortet than a minute.
 * Trip lengths
 * Counting the total number of 'members' and 'casual'
-* Average ride time **member_casual** 
+* Average ride time **member_casual**
+* Checking for which member takes more rides per month
+* Looking for the most popular start stations
+* Looking for the most popular end stations
+* Looking for the most popular route
 
+Further the columns that needed to be removed are : 'start_station_name', 'start_station_id', 'end_station_name', 'end_station_id', 'end_lat', 'end_lng',  as these columns have multiple NULL values which do not help in the analysis. 
+
+#### Cleaning the Data
+
+SQL Query : <a href="https://github.com/DataKit25/Case-Studies/blob/main/Google_DA_Capstone_%20Cyclistic-Case-Study/Data%20Cleaning.sql"> Data Cleaning </a> <br>
+Here the following things are being taken care of: 
+* The rows with the NULL values are reomved.
+* Columns **'ride_length'** for trip duration, **'week_days'**, and **'month'** are added
+* Furthermore, the trips lesser than a minute and longer than a day are not inculded.
+
+### Analyse 
+
+SQL Query : <a href="https://github.com/DataKit25/Case-Studies/blob/main/Google_DA_Capstone_%20Cyclistic-Case-Study/Data%20Analysis.sql">Data Analysis </a><br>
+
+With the data cleaned, it can be used for the most crutial step of analysis. 
+
+Using the data, I created two separate Dsahboards:
+* <a href="https://public.tableau.com/views/CyclisticCasestudyDB1/CyclisticDB1?:language=en-GB&:display_count=n&:origin=viz_share_link"> Dashboard 1 </a>
+* <a href="https://public.tableau.com/views/CyclisticCasestudyDB2/CyclisticDB2?:language=en-GB&:display_count=n&:origin=viz_share_link"> Dashboard 1 </a>
+
+**Dashboard 1** : ![Dashboard 1](Google_DA_Capstone_ Cyclistic-Case-Study/Tableau Viz/DB1_v2.png)
