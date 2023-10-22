@@ -63,3 +63,20 @@ These are combined into a table named 'combined_tripdata', containing 6,375,738 
 SQL Query :  <a href="https://github.com/DataKit25/Case-Studies/blob/main/Google_DA_Capstone_%20Cyclistic-Case-Study/Data%20Exploration.sql">Data Exploration</a> <br>
 I decided to familiarise myself with the data, to make data cleaining as efficient and perfect as possible. 
 
+Steps to understand the data I am working with: 
+* Checking for the number of NULL values
+* Checking for duplicate values
+* Checking if there are any duplicate ***'ride_id'***
+* Checking for NULL values for specific columns: 
+  * Start station name
+  * End station name
+  * Start station id
+  * End station id
+  * Start latitude and longitude
+  * End latitude and longitude
+* Checking for the various rideable types
+* Checking for how many rides lasted over a day and shortet than a minute.
+* Trip lengths
+* Counting the total number of 'members' and 'casual'
+* Average ride time **member_casual** 
+
