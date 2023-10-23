@@ -101,8 +101,77 @@ SQL Query : <a href="https://github.com/DataKit25/Case-Studies/blob/main/Google_
 
 With the data cleaned, it can be used for the most crutial step of analysis. 
 
-Using the data, I created two separate Dsahboards:
+Using the data, I created two separate Dashboards:
 * <a href="https://public.tableau.com/views/CyclisticCasestudyDB1/CyclisticDB1?:language=en-GB&:display_count=n&:origin=viz_share_link"> Dashboard 1 </a>
 * <a href="https://public.tableau.com/views/CyclisticCasestudyDB2/CyclisticDB2?:language=en-GB&:display_count=n&:origin=viz_share_link"> Dashboard 1 </a>
 
-**Dashboard 1** : ![Dashboard 1](Google_DA_Capstone_ Cyclistic-Case-Study/Tableau Viz/DB1_v2.png)
+** Dashboard 1 ** : <img width="1736" alt="DB1_v2" src="https://github.com/DataKit25/Case-Studies/assets/138516708/a5aaa259-41b5-447f-95a6-8f06a9ab8604"> <br>
+
+** Dashboard 2 ** : <img width="1282" alt="Cyclistic DB2" src="https://github.com/DataKit25/Case-Studies/assets/138516708/c29f9d4b-581c-4992-8308-7b81eb13b79c"> <br>
+
+Firstly we can see the spread of riders based on the bike type and the rider type: <br>
+<img width="1339" alt="Bike_type_per_cus" src="https://github.com/DataKit25/Case-Studies/assets/138516708/1edb4847-6229-4719-9fc7-f2328ccb9b81"> <br>
+
+**Rides per Hour**
+![Rides per hour](https://github.com/DataKit25/Case-Studies/assets/138516708/c8cbad03-996d-4fc7-9bdd-a56fd93cf14f) <br>
+Here we can see how for member users peaks at 8 AM  and then at 5 PM, while the biggest peak for casual users is only at 5 PM, the total trips gradually rises till the peak. <br>
+While for memeber users there is a sharp dip after 8 AM, but the total trips are always higher than the causal members. 
+
+** Avg rides per hour **
+![Avg rides span per hour](https://github.com/DataKit25/Case-Studies/assets/138516708/a400787e-6440-48e5-953a-bf599731bf3c) <br>
+The average ride span is highest between 9 AM to 4:30 PM for casual members, While the average ride span for member customers stays relatively flat, indicating that the bikes useage is fairly stable and presumably being used on a regural route. 
+
+** Rides per day **
+![Rides per day](https://github.com/DataKit25/Case-Studies/assets/138516708/5763c2e9-3d57-4d6f-8a39-93e56ebdbef7)
+
+The total trips for members is highest between Monday and Thrusday, with a steadt decline from Thrusday to Saturday, the peak being on Thrusday. 
+While for casual riders the trips go up grdually with the peak comming on Saturday. 
+
+** Avg ride span per day **
+
+![Avg ride span pre day](https://github.com/DataKit25/Case-Studies/assets/138516708/69826d59-4b42-4585-b4de-d6a0ef62b7f5)
+
+Again in the graph that shows the average ride span per day we ca see that the ride span of the member riders stays flat
+with a slight increase on Saturday and Sunday, indicating that the members use this serivice for dailt commute from a constant start station. <br>
+While the trend for casual rides sees a dip in between Monday and Friday, with a gradual increase to the which falls on Saturday and Sunday. 
+
+** Ride per month **
+
+![Ride per month](https://github.com/DataKit25/Case-Studies/assets/138516708/5e983eb4-c42e-4104-bcc1-e7537ed7f5cf)
+
+
+Here we can see the trend in total trips over the months, we ca see a big spke in the total trips in the month of September. This could be due a festival. 
+
+** Avg ride span per month **
+
+![Avg ride span per month](https://github.com/DataKit25/Case-Studies/assets/138516708/3509b5b8-48a9-48c9-b1dd-18c853df653c)
+
+The average ride span for casual users is higher than that of the members, with a sustained high in between the months of April to September, with a slight dip in the month of June
+
+** Top ten starting stations **
+![Top ten starting stations](https://github.com/DataKit25/Case-Studies/assets/138516708/e6373da5-e895-44c4-b31b-84ddd7f0a0ff)
+
+Here we have the locations of the top 10 starting stations 
+
+** Popular starting stations ** 
+![Popular starting stations](https://github.com/DataKit25/Case-Studies/assets/138516708/4f53344b-f66f-4b70-a2a5-989a73dd3b6b)
+
+** Top ten ending stations **
+
+![Top ten ending staions](https://github.com/DataKit25/Case-Studies/assets/138516708/6469aee1-dbd7-4e74-bc58-c66f844da7b2)
+
+** Following are the trends per rideable types **
+
+** Hourly trends **
+![Hourly trip ternds by member and rideable type](https://github.com/DataKit25/Case-Studies/assets/138516708/7264a7d4-123b-4ce0-af33-028111e94abf) <br>
+
+** Weekly trends ** 
+![Weekly Trip trends by member and rideable type](https://github.com/DataKit25/Case-Studies/assets/138516708/d7a814b0-66be-4202-9c6a-a4a88594840c) <br> 
+
+** Monthly trends **
+
+![Monthly trip trends by member type and rideable type](https://github.com/DataKit25/Case-Studies/assets/138516708/6c8eeeeb-a2f5-4d5d-8fff-9448187b3d86)
+
+
+
+
