@@ -47,22 +47,23 @@ The data was downloaded from Data source : <a href="https://divvy-tripdata.s3.am
 The Data is made available by Motivate International Inc. under the following <a href="https://divvybikes.com/data-license-agreement">license.
 
 #### Data Organization
-There are a dozen files named in the format YYYYMM-divvy-tripdata, each containing data for a specific month. These files encompass information such as ride identification, bike type, start and end times, station names, station IDs, geographical coordinates, and rider membership status. The corresponding column headers are as follows: ride_id, rideable_type, started_at, ended_at, start_station_name, start_station_id, end_station_name, end_station_id, start_lat, start_lng, end_lat, end_lng, and member_casual.
+There are a dozen files named in the format YYYYMM-divvy-tripdata, each containing data for a specific month. These files encompass information such as ride identification, bike type, start and end times, station names, station IDs, geographical coordinates, and rider membership status. The corresponding column headers are as follows: **'ride_id'**, **'rideable_type'**, **'started_at'**, **'ended_at'**, **'start_station_name'**, **'start_station_id'**, **'end_station_name'**, **'end_station_id'**, **'start_lat'**, **'start_lng'**, **'end_lat'**, **'end_lng'**, and **'member_casual'**.
 
 ### Process
 
-BigQuery used to combine the 12 dataset into one, futher it was also used to cleaned. 
+BigQuery is used to combine the 12 dataset into one, futher it was also used to clean the combined dataset. 
 Reason for using BigQuery: 
 Excel or Google Sheets have a limit of 1.04 milliom rows and  2 million respectively,  and the combined data has a row conut of 6.3  million. 
 
 #### Combining the Data
 SQL Query : <a href="https://github.com/DataKit25/Case-Studies/blob/main/Google_DA_Capstone_%20Cyclistic-Case-Study/Combining%20Data.sql">Combinig Data</a>. <br>
-The 12 datasets are uploaded to BigQuery as, ' 2022_09_tripdata', and so on till 2023_09. 
-These are combined into a table named 'combined_tripdata', containing 6,375,738 rows. 
+The 12 datasets are uploaded to BigQuery as, ***' 2022_09_tripdata'***, and so on till ***'2023_09'***. 
+These are combined into a table named **'combined_tripdata'**, containing 6,375,738 rows. 
 
 #### Exploring the Data
 SQL Query :  <a href="https://github.com/DataKit25/Case-Studies/blob/main/Google_DA_Capstone_%20Cyclistic-Case-Study/Data%20Exploration.sql">Data Exploration</a> <br>
-I decided to familiarise myself with the data, to make data cleaining as efficient and perfect as possible. 
+I familiarized myself with the data to optimize data cleaning efficiency and accuracy.
+
 
 Steps to understand the data I am working with: 
 * Checking for the number of NULL values
@@ -85,7 +86,7 @@ Steps to understand the data I am working with:
 * Looking for the most popular end stations
 * Looking for the most popular route
 
-Further the columns that needed to be removed are : 'start_station_name', 'start_station_id', 'end_station_name', 'end_station_id', 'end_lat', 'end_lng',  as these columns have multiple NULL values which do not help in the analysis. 
+Further, the columns that needed to be removed are : 'start_station_name', 'start_station_id', 'end_station_name', 'end_station_id', 'end_lat', 'end_lng',  as these columns have multiple NULL values which do not help in the analysis. 
 
 #### Cleaning the Data
 
@@ -95,7 +96,7 @@ Here the following things are being taken care of:
 * Columns **'ride_length'** for trip duration, **'week_days'**, and **'month'** are added
 * Furthermore, the trips lesser than a minute and longer than a day are not inculded.
 
-### Analyse 
+### Analyse & Share 
 
 SQL Query : <a href="https://github.com/DataKit25/Case-Studies/blob/main/Google_DA_Capstone_%20Cyclistic-Case-Study/Data%20Analysis.sql">Data Analysis </a><br>
 
@@ -114,18 +115,16 @@ Firstly we can see the spread of riders based on the bike type and the rider typ
 
 **Rides per Hour**
 ![Rides per hour](https://github.com/DataKit25/Case-Studies/assets/138516708/c8cbad03-996d-4fc7-9bdd-a56fd93cf14f) <br>
-Here we can see how for member users peaks at 8 AM  and then at 5 PM, while the biggest peak for casual users is only at 5 PM, the total trips gradually rises till the peak. <br>
-While for memeber users there is a sharp dip after 8 AM, but the total trips are always higher than the causal members. 
+The graph shows that casual and member bike-sharing riders have different usage patterns. Casual riders tend to take more rides during the day and on weekends, and they take longer rides than member riders, who tend to take more rides during the morning and evening rush hours. 
 
 ** Avg rides per hour **
 ![Avg rides span per hour](https://github.com/DataKit25/Case-Studies/assets/138516708/a400787e-6440-48e5-953a-bf599731bf3c) <br>
-The average ride span is highest between 9 AM to 4:30 PM for casual members, While the average ride span for member customers stays relatively flat, indicating that the bikes useage is fairly stable and presumably being used on a regural route. 
+The graph shows that casual bike-sharing riders have longer average ride spans than member riders, at all hours of the day. The average ride span for both groups is longest in the morning and evening rush hours.
 
 ** Rides per day **
 ![Rides per day](https://github.com/DataKit25/Case-Studies/assets/138516708/5763c2e9-3d57-4d6f-8a39-93e56ebdbef7)
 
-The total trips for members is highest between Monday and Thrusday, with a steadt decline from Thrusday to Saturday, the peak being on Thrusday. 
-While for casual riders the trips go up grdually with the peak comming on Saturday. 
+The graph shows that casual bike-sharing riders take more rides on weekends and overall than member riders, who take more rides on weekdays.
 
 ** Avg ride span per day **
 
@@ -151,14 +150,20 @@ The average ride span for casual users is higher than that of the members, with 
 ** Top ten starting stations **
 ![Top ten starting stations](https://github.com/DataKit25/Case-Studies/assets/138516708/e6373da5-e895-44c4-b31b-84ddd7f0a0ff)
 
-Here we have the locations of the top 10 starting stations 
-
-** Popular starting stations ** 
-![Popular starting stations](https://github.com/DataKit25/Case-Studies/assets/138516708/4f53344b-f66f-4b70-a2a5-989a73dd3b6b)
+Here we have the locations of the top 10 starting stations.
 
 ** Top ten ending stations **
 
 ![Top ten ending staions](https://github.com/DataKit25/Case-Studies/assets/138516708/6469aee1-dbd7-4e74-bc58-c66f844da7b2)
+
+** Starting stations based on member casual **
+![starting stations](https://github.com/DataKit25/Case-Studies/assets/138516708/97c8701a-80f7-4677-b511-9f93524ca9f0)
+
+We see that casual riders are mosre likely to start their trips near leisure spots, like museum, harbours etc, while members tend to use it ofr commuting and other essential tasks. 
+
+** Ending station based on member casual **
+![ending stations](https://github.com/DataKit25/Case-Studies/assets/138516708/1ad9c3e7-5fc7-4e1b-b6a7-ee3f28e2c9c0)
+The ending stations for casual and member riders are similar, with a few more locales for member users. 
 
 ** Following are the trends per rideable types **
 
@@ -172,6 +177,30 @@ Here we have the locations of the top 10 starting stations
 
 ![Monthly trip trends by member type and rideable type](https://github.com/DataKit25/Case-Studies/assets/138516708/6c8eeeeb-a2f5-4d5d-8fff-9448187b3d86)
 
+In the above three graphs thats shows us the riding trends of the three rideable types, we see that the most used bike type is the classic bike, which is common between member and casual users. While casual users use all three offerings of bike types, the member users don't tend to use docked bike
 
+##### Summary 
 
+* From the data we can summarise that **'casual'** riders use the service for leisure purposes, where the bike use is higher through out the day as compared to **'member'** riders. Their usage is also high on the weekends and during the Fall seasons of August to October.
+**'Casual'** riders also show the trend of riding for longer than the **'member'** users, albeit not as frequently.
+These users are most likely to use the service for leisure, going to and from a place of interest.
+
+* While the **'members'** tend to use the service for their daily commute, i.e going to and from offices or universities etc. Their bike usage is highest in between 8AM to 5PM, the latter being the peak usage time.
+**'Member'** users also show a hihgher bike usage during the fall months similar to **'casual'** users.
+These users start and end their journeys near universities, commercial and, residential areas.   
+
+### Act
+
+Once we understand the differences between casual and member riders, we can develop marketing strategies to target casual riders and encourage them to become members.
+#### Recommendations
+**For casual riders:**
+
+* Highlight the convenience and affordability of bike sharing for leisure activities. Casual riders are more likely to use bike sharing for short trips to and from museums, parks, beaches, and other attractions. Emphasize how bike sharing can save them time and money on parking and transportation.
+* Promote bike sharing as a way to explore new places and get exercise. Casual riders are looking for fun and active ways to spend their free time. Create content and marketing campaigns that showcase how bike sharing can be used to discover new parts of the city and get around in a healthy way.
+* Offer discounts and promotions to casual riders. This could include discounted single-ride passes, multi-ride passes, or even annual memberships.   You could also offer discounts to riders who start their trips at or near popular tourist destinations.
+  
+**For member riders:** 
+
+* Focus on the reliability and affordability of bike sharing for commuting. Member riders are looking for a transportation option that is reliable and affordable, especially if they are using it to commute to work or school. Emphasize how bike sharing can help them save money on gas and parking, and how it is a more sustainable and environmentally friendly way to get around.
+* Promote bike sharing as a way to reduce stress and improve health. Commuting to work or school can be stressful, but bike sharing can be a great way to start and end the day with some exercise and fresh air. Create content and marketing campaigns that highlight the health benefits of bike commuting.
 
